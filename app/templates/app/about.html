@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Valkyrie System</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'app/img/core-img/favicon.ico'%}">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="{% static 'app/css/core-style.css'%}">
+    <link rel="stylesheet" href="{% static 'app/css/style.css'%}">
+
+    <!-- Responsive CSS -->
+    <link href="{% static 'app/css/responsive.css'%}" rel="stylesheet">
+
+    <!--Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Anton|Arimo|Crete+Round|Gothic+A1|PT+Sans|Roboto|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<style>
+@media (max-width:768px){section{padding-top:70%!important;}}
+@media (max-width:992px){#min{display:none;}}
+@media (min-width:993px){.card-login{width:500px}  #max{display:none;}}
+ html, body{ height: 100%; margin: 0;}
+label,a{color:#ff8a12; weight:500;}
+
+#about{background-image:url(../../static/app/img/about.jpg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+        height:100%;
+        padding-top:20%;}
+
+
+
+</style>
+
+<!-- Preloader -->
+<div id="preloader" stype = "margin :0 ">
+    <div class="showbox">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+            </svg>
+        </div>
+    </div>
+    <div class="questions-area text-center">
+        <p>Please Wait...</p>
+        <ul>
+            <li>Valkyrie Blockchain Trade System</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Gradient Background Overlay -->
+<div class="gradient-background-overlay"></div>
+
+<!-- Header Area Start -->
+<header class="header-area bg-img" style="">
+    <div class="container-fluid h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 h-100">
+                <div class="main-menu h-100">
+                    <nav class="navbar h-100 navbar-expand-lg">
+                        <!-- Logo Area  -->
+                        <a class="navbar-brand" href="{% url 'about' %}"><img
+                                src="{% static 'app/img/core-img/logo.png'%}"
+                                alt="Logo"></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu"
+                                aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i
+                                class="fa fa-bars"></i> Menu
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="studioMenu">
+                            <!-- Menu Area Start  -->
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about'%}">ABOUT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'registerpage'%}">REGISTER</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'login'%}">LOGIN</a>
+                                </li>
+                            </ul>
+                            <!-- Search Form -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Area End -->
+
+<!-- Social Sidebar Area Start -->
+<section id="about" class="about-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-white mb-4" style="color:#993300!important;font-family: 'Anton', sans-serif;font-size: 70px;">VALKYRIE SYSTEM</h2>
+                <h3 class="text-white mb-4" style="color:#331100!important;font-size: 34px;">BLOCKCHAIN FOR TRADE</h3>
+                <h4 class="text-white-50" style="color:#cc4400;font-size: 30px;">Increase Trust, Transparency and Accountability <br>for
+                    your trade</h4>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects Section -->
+<div id="projects" class="projects-section text-center" style="padding:128px 16px">
+
+        <!--System Advantages -->
+        <div class="w3-container" style="padding:10px 130px" >
+            <h1 style="color:#343a40;font-family: 'Crete Round', serif;font-size: 70px;">System Advantages</h1>
+        </div>
+
+        <!--Hyperledger Fabric-->
+        <div class="w3-container w3-light-grey" style="padding:160px 40px">
+          <div class="w3-row-padding">
+             <div class="w3-col m6">
+              <img class=" img-fluid" src="{% static 'app/img/hyperledger.png'%}" alt="blockchain" >
+            </div>
+            <div class="w3-col m6">
+              <h2 style="font-size: 35px;font-family: 'Roboto Slab', serif;">Hyperledger Fabric 기반의<br>허가형 프라이빗 블록체인 플랫폼</h2><br>
+              <p style="font-size: 19px;font-family: 'Gothic A1', sans-serif;">블록체인 기반의 스마트 컨트랙트는 계약 이행 및 검증과정이 네트워크로 자동화 되고,
+              계약실행 조건을 확인하는 사람의 간섭과 추가 비용이 들지 않습니다. 투명한 계약과정은 무역 계약을 하고자 하는 사용자들에게 비용절감 효과와 많은 기회를 제공합니다.</p>
+
+           </div>
+          </div>
+        </div>
+
+        <!-- Blockchain system -->
+        <div class="w3-container " style="padding:128px 16px">
+          <div class="w3-row-padding">
+            <div class="w3-col m6">
+              <h3 style="font-size: 35px;font-family: 'Roboto Slab', serif;">블록체인 시스템</h3><br>
+              <p style="font-size: 19px;font-family: 'Gothic A1', sans-serif;">블록체인 기반의 스마트 컨트랙트는 계약 이행 및 검증과정이 네트워크로 자동화 되고,
+              계약실행 조건을 확인하는 사람의 간섭과 추가 비용이 들지 않습니다.투명한 계약과정은 무역 계약을 하고자 하는 사용자들에게 비용절감 효과와 많은 기회를 제공합니다.</p>
+           </div>
+            <div class="w3-col m6">
+              <img class=" img-fluid" src="{% static 'app/img/blockchain.jpeg'%}"alt="blockchain" width="700" height="394">
+            </div>
+          </div>
+        </div>
+
+        <!--Trade contract Platform-->
+        <div class="w3-container w3-light-grey" style="padding:128px 16px">
+          <div class="w3-row-padding">
+            <div class="w3-col m6">
+              <h3 style="font-size: 35px;font-family: 'Roboto Slab', serif;">무역 계약 플랫폼</h3><br>
+              <p style="font-size: 19px;font-family: 'Gothic A1', sans-serif;">무역 거래를 하고자 할때, 가장 중요한 것은 신뢰입니다.
+                            블록체인 기반 무역 계약 플랫폼을 통해 사업자와 은행, 운송사는 신뢰성 기반의 투명한 거래가 가능해지고 빠른 계약을 통해 많은 기회를 잡을 수 있습니다.</p>
+           </div>
+            <div class="w3-col m6">
+              <img class=" img-fluid" src="{% static 'app/img/about1.jpg'%}"alt="blockchain" width="700" height="394">
+            </div>
+          </div>
+        </div>
+
+
+</div>
+
+
+<!-- Footer Area Start -->
+<footer class="footer-area">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-12 h-100" style="padding-right:0px;">
+                <div class="footer-content h-100 d-md-flex align-items-center justify-content-between">
+                    <!-- Single Footer Content -->
+                    <div class="single-footer-content">
+                        <i class="fa fa-wifi"></i>
+                        <a>valkyriesystem.online</a>
+                    </div>
+                    <!-- Single Footer Content -->
+                    <div class="single-footer-content">
+                        <i class="fa fa-copyright"></i>
+                        <a>Operation Valkyrie</a>
+                    </div>
+                    <!-- Single Footer Content -->
+                    <div style="height:50px;background:#ff7b07;padding:10px"  class="single-footer-content">
+                        <i class="fa fa-file-text-o"></i>
+                        <a href="{% url 'user_manual' %}" target="_blank">User Manual</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Area End -->
+
+
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="{% static 'app/js/jquery/jquery-2.2.4.min.js'%}"></script>
+<!-- Popper js -->
+<script src="{% static 'app/js/popper.min.js'%}"></script>
+<!-- Bootstrap js -->
+<script src="{% static 'app/js/bootstrap.min.js'%}"></script>
+<!-- Plugins js -->
+<script src="{% static 'app/js/plugins.js'%}"></script>
+<!-- Active js -->
+<script src="{% static 'app/js/active.js'%}"></script>
+
+</body>
+<script>
+
+
+</script>
+
+</html>
