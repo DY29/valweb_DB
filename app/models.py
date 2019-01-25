@@ -204,12 +204,10 @@ class Contract_DO(models.Model):
 
 class Contract_OS(models.Model):
     contractname = models.CharField(max_length=50)
-    contract_id = models.CharField(max_length=20)
     sha256 = models.CharField(max_length=100)
     filename = models.CharField(max_length=100)
     owner = models.ForeignKey(Member, on_delete=models.CASCADE, null=True)
     share1 = models.CharField(max_length=30)
-    Created = models.CharField(max_length=20,null=True)
     a = models.CharField(max_length=20,null=True)
     b = models.CharField(max_length=20,null=True)
     c = models.CharField(max_length=20,null=True)

@@ -1169,7 +1169,6 @@ def submit2_1(request):
     try:
         user_id = request.session['user_id']
         contractname = request.POST['contractname']
-        contract_id = request.POST['contract_id']
         a = request.POST['a']
         b = request.POST['b']
         c = request.POST['c']
@@ -1236,7 +1235,7 @@ def submit2_1(request):
 
             # 데이터 저장
             contract = Contract_OS(contractname=contractname, sha256=hash,
-                                   filename='document/OS_' + time_format + '.pdf', Created=time_format,a=a, b=b,c=c,d=d,e=e,f=f,g=g,h=h,i=i,j=j,k=k,l=l,m=m,n=n,o=o)
+                                   filename='document/OS_' + time_format + '.pdf', a=a, b=b,c=c,d=d,e=e,f=f,g=g,h=h,i=i,j=j,k=k,l=l,m=m,n=n,o=o)
 
             # 로그인한 사용자 정보를 Contract에 같이 저장
             user_id = request.session['user_id']
